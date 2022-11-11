@@ -24,7 +24,7 @@ input [2:0]S;
 reg Y;
 always @(I,S)
 begin
-    case(S[2],S[1],S[0])
+    case({S[2],S[1],S[0]})
     3'b101 : Y = I[5];
     3'b100 : Y = I[4];
     3'b011 : Y = I[3];
